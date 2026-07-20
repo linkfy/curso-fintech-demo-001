@@ -25,7 +25,7 @@ class Transaccion(BaseModel):
     moneda: Moneda
 
 
-def aplicar_comision(transaccion: Transaccion, porcentaje: Decimal) -> str:
+def aplicar_comision(transaccion: Transaccion, porcentaje: Decimal) -> Decimal:
     """
     Aplica una comisión porcentual a una transacción
 
