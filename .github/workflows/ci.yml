@@ -1,0 +1,24 @@
+# El nombre del workflow
+name: aprendiendo-github-actions
+
+# Especificar cuando se ejecuta el workflow
+on: [push]
+
+# Tareas a realizar
+jobs:
+    # Nombre de la tarea que definiremos
+    quality:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Paso 1 Descargar el código
+              uses: actions/checkout@v6
+
+            - name: Paso 2 Instalar UV
+              uses: astral-sh/setup-uv@v5
+
+            - name: Paso 3 Instalar Dependencias
+              run: make install
+
+            - name: Paso 4 Pasar los checks
+              run: make check

@@ -1,0 +1,16 @@
+site_name: Docs Transacciones
+
+theme:
+  name: material
+
+nav:
+  - Inicio: index.md
+  - Referencia de API: referencia.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - src
